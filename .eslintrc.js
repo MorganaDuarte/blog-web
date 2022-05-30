@@ -39,6 +39,7 @@ module.exports = {
     'eqeqeq': 0,
     'space-infix-ops': 0,
     'block-spacing': 0,
-    'brace-style': 0
+    'brace-style': 0,
+    'no-return-assign': 0,
   }
 }

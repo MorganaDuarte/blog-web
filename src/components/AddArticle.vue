@@ -10,7 +10,7 @@
                 <b-button size="sm" v-on:click.prevent="post">Adicione um artigo</b-button>
             </b-col>
         </form>
-        <div v-if="error" class="alert alert-danger" role="alert">
+        <div v-if="error" class="alert alert-danger mt-2" role="alert">
             Something went wrong...
         </div>
 

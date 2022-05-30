@@ -4,7 +4,8 @@
         <div v-for="blog in blogs" v-bind:key="blog">
             <router-link v-bind:to="'/blog/' + blog.id" class="link"><h3 class="single">{{blog.title}}</h3></router-link>
         </div>
-        <h3 v-if='error'>Ops, something got wrong. Sorry!</h3>
+        
+        <h4 class="mt-5" v-if='error'>Ops, something went wrong. Sorry!</h4>
     </div>
 </template>
 
