@@ -28,12 +28,13 @@ export default{
             body: "",
        },
        submitted: false,
-       error: false
+       error: false,
+       URL: "https://morgana-blog-api.herokuapp.com/"
     }
   },
   methods:{
       post: function (){
-          this.$http.post('http://localhost:3000/articles', {
+          this.$http.post(this.URL + 'articles/', {
               title: this.blog.title,
               body: this.blog.body,
               userId: 1

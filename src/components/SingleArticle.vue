@@ -42,12 +42,13 @@ components: {
         title: "",
         body: "",
       },
-      edit: false
+      edit: false,
+      URL: "https://morgana-blog-api.herokuapp.com/"
     };
   },
   created() {
     this.$http
-      .get("http://localhost:3000/articles/" + this.id)
+      .get(this.URL + "articles/" + this.id)
       .then(function (data) {
         this.blog = data.body;
       });
@@ -58,7 +59,7 @@ components: {
       else {
         this.edit = false;
         this.$http
-          .put("http://localhost:3000/articles/" + this.id,
+          .put(this.URL + "articles/" + this.id,
           {
               title: this.blog.title,
               body: this.blog.body,
@@ -72,7 +73,7 @@ components: {
     },
     destroyArticle: function () {
       this.$http
-        .delete("http://localhost:3000/articles/" + this.id)
+        .delete(this.URL + "articles/" + this.id)
         .then(function () {
           this.$router.push("/");
         });

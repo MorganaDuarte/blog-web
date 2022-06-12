@@ -14,14 +14,15 @@ export default {
     data(){
         return {
             blogs: [],
-            error: false
+            error: false,
+            URL: "https://morgana-blog-api.herokuapp.com/"
         }
     },
     methods: {
 
     },
     created(){
-        this.$http.get('http://localhost:3000/articles').then(function(data){
+        this.$http.get(this.URL + "articles").then(function(data){
             this.blogs = data.body
         }).catch(() => this.error = true)
     }

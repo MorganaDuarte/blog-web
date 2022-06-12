@@ -36,6 +36,7 @@ export default {
   data() {
     return {
       comments: [],
+      URL: "https://morgana-blog-api.herokuapp.com/"
     };
   },
     computed: {
@@ -45,7 +46,7 @@ export default {
   },
   created() {
     this.$http
-      .get("http://localhost:3000/articles/" + this.id + "/comments")
+      .get(this.URL + "articles/" + this.id + "/comments")
       .then(function (data) {
         this.comments = data.body;
       });
@@ -53,7 +54,7 @@ export default {
   methods: {
     add: function () {
       this.$http
-        .post("http://localhost:3000/articles/" + this.id + "/comments", {
+        .post(this.URL + "articles/" + this.id + "/comments", {
           body: this.comments.body,
         })
         .then(function (data) {
@@ -62,7 +63,7 @@ export default {
     },
     destroyComment: function (id) {
       this.$http
-        .delete("http://localhost:3000/articles/" + this.id + "/comments/" + id)
+        .delete(this.URL + "articles/" + this.id + "/comments/" + id)
         .then(function (data) {
           this.comments = data.body;
         });
