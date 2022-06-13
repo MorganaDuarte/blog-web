@@ -1,28 +1,19 @@
-# blognew-front
+<h2> Blog Web</h2>
 
-> A Vue.js project
+<h3>Hello guys</h3>
+<p> A Vue.js project</p>
 
-## Build Setup
+<p> You can: </p>
+<ul>
+  <li> Add articles</li>
+  <li> Edit your articles</li>
+  <li> Create comments</li>
+  <li> Delete one or all</li>
+</ul>
+<br>
 
-``` bash
-# install dependencies
-npm install
+<img src="./showArticle.png" width="500">
+<img src="./article.png" width="500">
 
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run all tests
-npm test
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
-# blog-web
+<p>Take a look at the API: <a href = https://github.com/MorganaDuarte/blog-api> Blog API </a> </p>
+<p>Project create for study!</p>
